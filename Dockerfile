@@ -17,9 +17,11 @@ RUN go get github.com/jwilder/docker-gen \
     && make get-deps \
     && make all
 
-FROM alpine:3.10
+FROM alpine:latest 
+#resin/raspberry-pi-alpine
+ # alpine:3.9
 
-LABEL maintainer="Yves Blusseau <90z7oey02@sneakemail.com> (@blusseau)"
+LABEL maintainer="Rudi Middel <r.middel@mrbussy.eu> (@mrbussy)"
 
 ENV DEBUG=false \
     DOCKER_HOST=unix:///var/run/docker.sock
